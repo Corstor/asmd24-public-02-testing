@@ -123,7 +123,7 @@ public class StandardDeviceTest {
 
         @BeforeEach
         void init(){
-            this.mockFailingPolicy = spy(mock(FailingPolicy.class));
+            this.mockFailingPolicy = spy(FailingPolicy.class);
             device = new StandardDevice(this.mockFailingPolicy);
             // the mock is a TD used to check you are collaborating as expected
             when(mockFailingPolicy.attemptOn()).thenReturn(true, true, false);
